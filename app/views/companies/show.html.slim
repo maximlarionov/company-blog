@@ -1,0 +1,21 @@
+.show-item
+  .well.company.form-horizontal
+
+    .control-group
+      label.control-label
+        | Name
+      .controls
+        .input-xlarge.uneditable-input.string.span7
+          = company.name
+    .control-group
+      label.control-label
+        | Subdomain
+      .controls
+        .input-xlarge.uneditable-input.string.span7
+          = company.subdomain
+  .form-actions
+    = link_to(edit_company_path(company), class: 'btn btn-primary') do
+      i.fi-pencil
+      | Edit
+    '  or
+    = link_to 'Back', :back
