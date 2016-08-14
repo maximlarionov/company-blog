@@ -5,12 +5,12 @@ class CompaniesController < ApplicationController
   expose(:companies) { Company.page(params[:page]) }
 
   def create
-    flash[:notice] = 'Company was successfully created.' if company.save
+    flash[:notice] = "Company was successfully created." if company.save
     respond_with(company)
   end
 
   def update
-    flash[:notice] = 'Company was successfully updated.' if company.save
+    flash[:notice] = "Company was successfully updated." if company.save
     respond_with(company)
   end
 
